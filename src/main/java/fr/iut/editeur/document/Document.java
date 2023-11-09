@@ -35,4 +35,8 @@ public class Document {
         String toUpper = texte.substring(start, end).toUpperCase();
         remplacer(start, end, toUpper);
     }
+
+    public void effacer(int start,int end){
+        remplacer(start,end,"");
+    }
 }

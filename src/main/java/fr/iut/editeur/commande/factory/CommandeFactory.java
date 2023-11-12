@@ -20,6 +20,9 @@ public class CommandeFactory {
         return switch (name) {
             case "ajouter" -> new CommandeAjouter(document, parameters);
             case "remplacer" -> new CommandeRemplacer(document, parameters);
+            case "majuscules" -> new CommandeMajuscule(document, parameters);
+            case "effacer"-> new CommandeEffacer(document,parameters);
+            case "clear"->new CommandeClear(document,parameters);
             default -> null;
         };
     }

@@ -12,7 +12,7 @@ public class CommandeRemplacer extends CommandeDocument {
             System.err.println("Format attendu : ajouter;debut;fin;chaine");
             return;
         }
-
+//testcommit
         int debut = Integer.parseInt(parameters[1]);
         int fin=Integer.parseInt(parameters[2]);
         String remplacement=parameters[3];

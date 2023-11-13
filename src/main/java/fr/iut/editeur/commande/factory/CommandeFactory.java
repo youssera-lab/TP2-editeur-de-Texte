@@ -16,6 +16,11 @@ public class CommandeFactory {
 
     private CommandeFactory() {}
 
+    /**
+     * Description de la méthode
+     * @param name correspondant ua nom de la methode a executer
+     * @param document correspondant au document sur lequel on travaille
+     */
     public Commande createCommand(String name, Document document, String[] parameters) {
         return switch (name) {
             case "ajouter" -> new CommandeAjouter(document, parameters);
@@ -23,6 +28,7 @@ public class CommandeFactory {
             case "majuscules" -> new CommandeMajuscule(document, parameters);
             case "effacer"-> new CommandeEffacer(document,parameters);
             case "clear"->new CommandeClear(document,parameters);
+            case "inserer"-> new CommandeInserer(document,parameters);
             default -> null;
         };
     }

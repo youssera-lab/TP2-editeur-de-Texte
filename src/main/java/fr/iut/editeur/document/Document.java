@@ -42,4 +42,19 @@ public class Document {
     public void clear(){
         texte="";
     }
+
+    /**
+     * Description de la méthode
+     * @param start correspondant au debut de l'index où insérer la chaine
+     * @param chaine correspondant à la chaine à insérer
+     */
+    public void inserer(int start,String chaine){
+        if (start >= 0 && start <= texte.length()) {
+            String debutTexte = texte.substring(0, start);
+            String finTexte = texte.substring(start);
+            texte = debutTexte + chaine + finTexte;
+        } else {
+            System.out.println("Index invalide : " + start);
+        }
+    }
 }
